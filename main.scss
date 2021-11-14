@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&family=Praise&display=swap');
+  
   *,
   *::after,
   *::before  {
@@ -7,6 +9,8 @@ $bc-color:#ecf0f3;
 $font-color: #555555;
 $shadow-color: #cbced1;
 $white-color:#ffffff;
+$btn-color: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+$btn-hover-color: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
 body {
   margin: 0;
   height: 100vh;
@@ -21,14 +25,112 @@ body {
   background-color: $bc-color;
 }
 
-.login-wrapper {
-  width: 430px;
-  height: 700px;
-  padding: 60px 35px 35px 35px;
-  border-radius: 40px;
-  background-color: $bc-color;
-  box-shadow: 13px 13px 20px $shadow-color,
-   -13px -13px 20px $white-color;
+.login {
+  &-wrapper {
+    width: 430px;
+    height: 700px;
+    padding: 60px 35px 35px 35px;
+    border-radius: 40px;
+    background-color: $bc-color;
+    box-shadow: 13px 13px 20px $shadow-color,
+    -13px -13px 20px $white-color;
+      .signin-btn {
+        outline:none;
+        border:none;
+        cursor: pointer;
+        width: 100%;
+        height: 60px;
+        border-radius: 30px;
+        font-family: inherit;
+        font-weight: 700;
+        font-size: 20px;
+        color:$white-color;
+        background-color: #02c8db;
+        box-shadow: 2px 2px 6px #b1b1b1,
+        -2px -2px 6px $white-color;
+        transition: background-color .3s ease-in;
+        &:hover {
+           background-color: #50e5b9;
+        }
+        &:active {
+          background-color: #88ef9e;
+        }  
+   }
+  }
+  &-links {
+    padding-top: 20px;
+    text-align: center;
 
+    a {
+      text-decoration: none;
+      color:$font-color;
+      font-size: 14px;
+      font-weight: 200;
+      
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  &-logo {
+    background-color: #383636;
+    color:$white-color;
+    font-family: 'Praise', cursive;
+    font-size: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:100px;
+    height: 100px;
+    margin:0 auto;
+    border-radius: 50%;
+    box-shadow: 0 0 2px #5f5f5f,
+    0 0 0 5px $bc-color,
+    8px 8px 15px #a7aaaf,
+    -8px -8px 15px $white-color;
+        span {
+          width: 65px;
+          background-image: linear-gradient(45deg, #93a5cf 0%, #e4efe9 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+    }
+  }
+  &-title {
+    text-align: center;
+    font-size: 28px;
+    padding-top: 24px;
+    letter-spacing: 0.5px;
 
+  }
+  &-subtitle {
+    text-align: center;
+    font-size: 15px;
+    padding-top: 7px;
+    letter-spacing: 3px;
+  }
+  &-fields {
+    width:100%;
+   padding: 75px 5px 5px 5px;
+
+   input {
+     border:none;
+     background: none;
+     outline: none;
+     font-size: 18px;
+     color:$font-color;
+     padding: 20px 10px 20px 5px;
+   }
+
+   .username,
+   .password {
+     margin-bottom: 30px;
+     border-radius: 25px;
+     box-shadow: inset 8px 8px 8px $shadow-color,
+     inset -8px -8px 8px $white-color;
+      svg {
+        height:22px;
+        margin: 0 10px -3px 25px
+      }
+   }
+  }
 }
