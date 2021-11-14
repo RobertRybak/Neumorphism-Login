@@ -3,6 +3,10 @@
   *::before  {
     box-sizing: border-box;
 }
+$bc-color:#ecf0f3;
+$font-color: #555555;
+$shadow-color: #cbced1;
+$white-color:#ffffff;
 body {
   margin: 0;
   height: 100vh;
@@ -13,6 +17,18 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  color:#555555;
-  background-color: #ecf0f3;
+  color:$font-color;
+  background-color: $bc-color;
+}
+
+.login-wrapper {
+  width: 430px;
+  height: 700px;
+  padding: 60px 35px 35px 35px;
+  border-radius: 40px;
+  background-color: $bc-color;
+  box-shadow: 13px 13px 20px $shadow-color,
+   -13px -13px 20px $white-color;
+
+
 }
